@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Proza+Libre:wght@600&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Proza+Libre:wght@600&family=Space+Mono:wght@400;700&display=swap");
 body, html {
   padding: 0;
   margin: 0;
   background: #081426;
+  color: #ccd6f6;
 }
 
 li a {
@@ -67,7 +68,7 @@ navbar.nav ul.part2 a.resume-button:hover {
 
 #left-link {
   display: flex;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 100px);
   align-items: center;
   flex-direction: column;
   position: fixed;
@@ -97,14 +98,14 @@ navbar.nav ul.part2 a.resume-button:hover {
 #left-link::after {
   content: "";
   width: 2px;
-  height: 88px;
+  height: 130px;
   background-color: #949fbd;
 }
 
 #right-link {
   display: flex;
   float: right;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 100px);
   align-items: center;
   flex-direction: column;
   position: fixed;
@@ -138,7 +139,7 @@ navbar.nav ul.part2 a.resume-button:hover {
 #right-link::after {
   content: "";
   width: 2px;
-  height: 88px;
+  height: 130px;
   background-color: #949fbd;
 }
 
@@ -158,11 +159,84 @@ navbar.nav ul.part2 a.resume-button:hover {
 
 #home, #about, #experience, #projects, #contact {
   height: 80vh;
-  background: #fff;
+  padding: 1em 10em;
 }
 
-#about, #projects {
-  background: #000;
+#home {
+  padding: 1em 10em;
+}
+#home p.head {
+  color: #a29bfe;
+  font-size: 16px;
+  font-family: "Space Mono", sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+#home h1 {
+  margin-top: 0.2em;
+  margin-bottom: 20px;
+  font-size: 50px;
+  margin-left: -4px;
+  font-family: "Open Sans", sans-serif;
+}
+#home .muted {
+  color: #8892b0;
+}
+#home p.under-text {
+  margin-top: 2em;
+  width: 440px;
+  font-size: 16px;
+  font-family: "Proza Libre", sans-serif;
+  text-align: justify;
+  line-height: 25px;
+}
+#home ul {
+  padding: 0;
+  margin-top: 3em;
+}
+#home ul li {
+  list-style: none;
+  display: inline-block;
+}
+#home ul li a {
+  text-decoration: none;
+  color: #a29bfe;
+  font-size: 18px;
+  font-family: "Space Mono", sans-serif;
+  display: block;
+  margin-right: 2.6em;
+  border: 1px solid #675cff;
+  padding: 10px 12px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+#home ul li a:hover {
+  background: rgba(162, 155, 254, 0.1);
+}
+#home ul li a.primary {
+  background: rgba(162, 155, 254, 0.1);
+  color: #ccd6f6;
+}
+#home ul li a.primary:hover {
+  background: rgba(162, 155, 254, 0.3);
+}
+
+#about h2 {
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+}
+#about h2 span {
+  color: #a29bfe;
+}
+#about h2::after {
+  position: absolute;
+  content: "";
+  height: 0.5px;
+  width: 40%;
+  right: 40%;
+  top: 55%;
+  background: #ccd6f6;
 }
 
 /*# sourceMappingURL=index.css.map */

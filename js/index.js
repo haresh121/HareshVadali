@@ -5,7 +5,7 @@ $(function() {
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html,body').animate({
-                    scrollTop: target.offset().top - 75
+                    scrollTop: target.offset().top - 80
                 }, 1000);
                 return false;
             }
@@ -27,13 +27,13 @@ window.onscroll = function() {
             $('#main-nav').animate({
                 top: "-60px"
             }, {
-                duration: 0.4
+                duration: 0.2
             });
         } else {
             $('#main-nav').animate({
                 top: "0"
             }, {
-                duration: 0.4
+                duration: 0.2
             });
         }
         lastScrollTop = st;
