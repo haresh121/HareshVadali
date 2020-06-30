@@ -46,3 +46,10 @@ window.onscroll = function() {
         });
     }
 }
+
+$('.extab').click(function (){
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+    var data = $('.active').attr('data-target');
+    $(".data").toggleClass("notactive");
+});

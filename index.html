@@ -13,10 +13,10 @@
 			<a href="index.html"><img width="40" height="70" src="illustrations/h-logo.svg" alt=""></a>
 		</div>
 		<ul class="nav-links part2">
-			<li><span>01. </span><a href="#about"> About</a></li>
-			<li><span>02. </span><a href="#experience"> Experience</a></li>
-			<li><span>03. </span><a href="#projects"> Work</a></li>
-			<li><span>04. </span><a href="#contact"> Contact</a></li>
+			<li data-con="1. "><a href="#about"> About</a></li>
+			<li data-con="2. "><a href="#experience"> Experience</a></li>
+			<li data-con="3. "><a href="#projects"> Work</a></li>
+			<li data-con="4. "><a href="#contact"> Contact</a></li>
 			<li><a href="#" class="resume-button">Resume</a></li>
 		</ul>
 	</navbar>
@@ -51,16 +51,72 @@
 
 		</section>
 		<section id="about">
-			<h2><span>1.</span> About Me</h2>
+			<h2>About Me</h2>
 			<div class="content">
-				<p>Hi!, I'm Haresh, a B.Tech graduate based in India</p>
-				<p>I build models and API's for ML such as Facial or Object Recognition, ChatBots using popular services such as Azure, AWS, Google and other ML models such as Sales Forecasting, Recommender Systems etc.</p>
-				<p>In addition I also build Web Applications/Sites using the populer VueJS framework, and also Server side scripting using Python's Flask framework</p>
-				<p>I've pursued my degree from <a href="https://gitam.edu">GITAM University</a>, and joined in <a href="https://cognizant.com">Cognizant Technology Solutions</a> shortly after pursueing my degree</p> where I'm a part of Identity and Access Management team
+				<div class="content-text muted">
+					<p>Hi!, I'm Haresh, a B.Tech graduate based in India</p>
+					<p>I build models and API's for ML such as Facial or Object Recognition, ChatBots using popular services such as Azure, AWS, Google and other
+						ML models such as Sales Forecasting, Recommender Systems etc.</p>
+					<p>In addition I also build Web Applications/Sites using the populer VueJS framework, and also Server side scripting using Python's Flask
+						framework.</p>
+					<p>I've pursued my degree from <a href="https://gitam.edu">GITAM University</a>, and joined in <a href="https://cognizant.com">Cognizant
+							Technology Solutions</a> shortly after
+						pursueing my degree where I'm a part of Identity and Access Management team.</p>
+					<p>Here are some technologies I'm good at: </p>
+					<div class="tech">
+						<ul>
+							<li>Python</li>
+							<li>C/C++</li>
+							<li>JavaScript/JQuery</li>
+						</ul>
+						<ul>
+							<li>Tensorflow</li>
+							<li>PyTorch</li>
+							<li>Flask</li>
+						</ul>
+						<ul>
+							<li>HTML & S(CSS)</li>
+							<li>VUE JS</li>
+							<li>Axios</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content-img">
+					<img style="pointer-events: none;" width="350" height="400" src="illustrations/profile.jpg" alt="">
+				</div>
 			</div>
 		</section>
 		<section id="experience">
-
+			<h2> My Experience</h2>
+			<div class="exp-tab">
+				<div class="tabs">
+					<ul>
+						<li class="extab active" data-target="cognizant">Cognizant</li>
+						<li class="extab" data-target="loop-reality">Loop Reality</li>
+					</ul>
+				</div>
+				<div class="tab-content">
+					<div id="loop-reality" class="data notactive">
+						<h3 class="heading">Jr. Data Analyst <span>@</span> <a href="https://perspect.ai/">Loop Reality</a></h3>
+						<span class="muted">May - June 2019</span>
+						<ul class="muted">
+							<li>Created Object and Facial detection models from scratch using Eigin Faces and Principle Component Analysis(PCA).</li>
+							<li>Created a store of keywords or popularly known as Keywords Bag by scraping the web and splitting the data into three categories of difficulty.</li>
+							<li>Proposed and made an algorithm that evaluates the person who is taking the interview based on the words they use and the way they speak using NLP.</li>
+						</ul>
+					</div>
+					<div id="cognizant" class=" data">
+						<h3 class="heading">Program Analyst <span>@</span> <a href="https://cognizant.com/">Cognizant</a></h3>
+						<span class="muted">January - June 2020</span>
+						<ul class="muted">
+							<li>Worked on various technologies and tools in IAM such as Forgerock, Sailpoint, and Okta</li>
+							<li>Got familiarity with Access and Identity Management concepts such as Single Sign On(SSO),
+								Federation, SAML Application Integration and User Onboarding and Management</li>
+							<li>Manually and Automated the User onboarding process and their authentication and authourization an lockout</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</section>
 		<section id="projects">
 
