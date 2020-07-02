@@ -235,7 +235,7 @@ navbar.nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	padding-bottom: 5em;
+	padding-bottom: 3em;
 }
 
 #about,
@@ -698,5 +698,15 @@ navbar.nav {
 		&:hover{
 			background: rgba(162, 155, 254, 0.3);
 		}
+	}
+}
+footer.foot-note{
+	margin-top: -40px;
+	padding-bottom: 4em;
+	text-align: center;
+	a{
+		color: $text;
+		font-family: "Space Mono", sans-serif;
+		text-decoration: none;
 	}
 }

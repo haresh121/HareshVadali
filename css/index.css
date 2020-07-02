@@ -203,7 +203,7 @@ navbar.nav ul.part2 a.resume-button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-bottom: 5em;
+  padding-bottom: 3em;
 }
 
 #about,
@@ -599,6 +599,17 @@ navbar.nav ul.part2 a.resume-button:hover {
 }
 #contact a:hover {
   background: rgba(162, 155, 254, 0.3);
+}
+
+footer.foot-note {
+  margin-top: -40px;
+  padding-bottom: 4em;
+  text-align: center;
+}
+footer.foot-note a {
+  color: #ccd6f6;
+  font-family: "Space Mono", sans-serif;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=index.css.map */
