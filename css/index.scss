@@ -8,12 +8,69 @@ html {
 	background: #081426;
 	color: #ccd6f6;
 }
+
+.toggle-overflow {
+	overflow: hidden;
+}
 // colors
 $text: #ccd6f6;
 $text-light: #dfe6e9;
 $primary: #a29bfe;
 $primary-2: #675cff;
 $primary-light: rgba(162, 155, 254, 0.1); // colors ends here
+// logo animation
+
+.start-animation {
+	position: fixed;
+	z-index: 200;
+	width: 100vw;
+	height: 100vh;
+	background: #081426;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@keyframes done {
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
+.start-animation svg {
+	transform-origin: center;
+	animation: done 2s cubic-bezier(0.76, 0, 0.24, 1) 3.2s both;
+}
+
+.st1 {
+	stroke-dasharray: 280;
+	animation: dash 3s cubic-bezier(0.76, 0, 0.24, 1) both;
+	border-radius: 5px;
+	transform-origin: top;
+}
+
+.st0 {
+	opacity: 0;
+	// transform: scale(0);
+	// transform-origin: center;
+	animation: disp 1s linear 2.5s both;
+}
+@keyframes disp {
+	100% {
+		opacity: 1;
+		// transform: scale(1);
+	}
+}
+@keyframes dash {
+	0% {
+		stroke-dashoffset: 280;
+	}
+
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+// ending here
 
 li a {
 	display: inline-block;
@@ -43,7 +100,7 @@ navbar.nav {
 		font-family: 'Space Mono', sans-serif;
 		font-size: 13px;
 
-		li::before{
+		li::before {
 			content: attr(data-con);
 			color: $primary;
 			margin-right: 2px;
@@ -60,7 +117,6 @@ navbar.nav {
 			&:hover {
 				color: $primary;
 			}
-
 		}
 
 		a.resume-button {
@@ -269,16 +325,21 @@ navbar.nav {
 		}
 	}
 }
+
 #about {
 	padding-right: 7em;
+
 	h2 {
 		font-size: 30px;
 		font-family: "Open Sans", sans-serif;
 		position: relative;
-		&::before{
-			content: "1. ";
+
+		&::before {
+			content: "01.";
+			font-family: "Space Mono", sans-serif;
 			color: $primary-2;
 		}
+
 		&::after {
 			position: absolute;
 			content: "";
@@ -289,6 +350,7 @@ navbar.nav {
 			background: $text;
 		}
 	}
+
 	.content {
 		display: flex;
 		justify-content: space-between;
@@ -296,7 +358,7 @@ navbar.nav {
 		.content-text {
 			width: 500px;
 			font-size: 16px;
-			font-family: "Mono Sans", sans-serif;
+			font-family: "Open Sans", sans-serif;
 			line-height: 22px;
 			text-align: justify;
 
@@ -337,10 +399,12 @@ navbar.nav {
 
 			ul {
 				padding-left: 5px;
-				li{
+
+				li {
 					list-style: none;
 					position: relative;
 				}
+
 				li::before {
 					content: "▹";
 					position: absolute;
@@ -355,15 +419,19 @@ navbar.nav {
 		}
 	}
 }
-#experience{
+
+#experience {
 	h2 {
 		font-size: 30px;
 		font-family: "Open Sans", sans-serif;
 		position: relative;
-		&::before{
-			content: "2. ";
+
+		&::before {
+			content: "02.";
+			font-family: "Space Mono", sans-serif;
 			color: $primary-2;
 		}
+
 		&::after {
 			position: absolute;
 			content: "";
@@ -374,21 +442,25 @@ navbar.nav {
 			background: $text;
 		}
 	}
-	.exp-tab{
+
+	.exp-tab {
 		margin-top: 3em;
 		width: 900px;
 		height: 400px;
 		// background: #000;
 		display: flex;
 		position: relative;
-		.tabs{
+
+		.tabs {
 			// border-left: 1px solid $primary;
 			height: 100%;
 			width: 20%;
-			ul{
+
+			ul {
 				padding: 0;
 				border-left: 1px solid $text;
-				li{
+
+				li {
 					list-style: none;
 					display: block;
 					font-size: 13px;
@@ -396,11 +468,13 @@ navbar.nav {
 					font-family: "Space Mono", sans-serif;
 					cursor: pointer;
 					padding: 1em 1.2em;
-					&:hover{
+
+					&:hover {
 						// background: $primary-light;
 						color: $primary;
 					}
-					&.active{
+
+					&.active {
 						background: $primary-light;
 						pointer-events: none;
 						color: $primary;
@@ -410,18 +484,22 @@ navbar.nav {
 			}
 		}
 	}
-	.tab-content{
-		padding: 0em 2em;
+
+	.tab-content {
+		padding: 0 2em;
 		width: 70%;
-		.heading{
+
+		.heading {
 			font-size: 20px;
-			font-family: "Mono Sans", sans-serif;
+			font-family: "Open Sans", sans-serif;
 			color: $text-light;
-			span{
+
+			span {
 				color: $primary;
 				font-family: "Proza Libre", sans-serif;
 			}
-			a{
+
+			a {
 				color: $primary;
 				text-decoration: none;
 				position: relative;
@@ -436,26 +514,31 @@ navbar.nav {
 					background: $primary;
 					transition: 0.3s;
 				}
-				&:hover::after{
+
+				&:hover::after {
 					width: 100%;
 				}
 			}
 		}
-		span{
+
+		span {
 			font-family: "Space Mono", sans-serif;
 			font-size: 14px;
 			font-weight: 600;
 		}
-		ul{
+
+		ul {
 			padding: 15px;
 			margin-top: 1.4em;
-			li{
+
+			li {
 				list-style: none;
 				position: relative;
 				// font-size: 18px;
-				font-family: "Mono Sans", sans-serif;
+				font-family: "Open Sans", sans-serif;
 				line-height: 26px;
 			}
+
 			li::before {
 				content: "▹";
 				position: absolute;
@@ -470,7 +553,150 @@ navbar.nav {
 			}
 		}
 	}
-	.notactive{
+
+	.notactive {
 		display: none;
+	}
+}
+
+#projects {
+	height: auto;
+	padding-right: 130px;
+	h2 {
+		font-size: 30px;
+		font-family: "Open Sans", sans-serif;
+		position: relative;
+
+		&::before {
+			content: "03.";
+			font-family: "Space Mono", sans-serif;
+			color: $primary-2;
+		}
+
+		&::after {
+			position: absolute;
+			content: "";
+			height: 0.5px;
+			width: 40%;
+			right: 40%;
+			top: 55%;
+			background: $text;
+		}
+	}
+
+	.projs {
+		margin-top: 4em;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		&:nth-child(n){
+			margin-bottom: 20px;
+		}
+		.proj-block {
+			width: 263px;
+			height: 300px;
+			padding: 32px 28px;
+			background: #172a45;
+			position: relative;
+			// border-radius: 5px;
+			margin-bottom: 15px;
+			transition: 0.2s;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			header {
+				width: 100%;
+				.icons-header {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					a {
+						color: $text;
+						transition: 0.4s;
+						font-size: 22px;
+
+						&:hover {
+							color: $primary;
+						}
+					}
+				}
+				.content-header{
+					pointer-events: none;
+					h3{
+						font-size: 22px;
+						font-family: "Open Sans", sans-serif;
+						color: $text;
+					}
+					p{
+						font-size: 14px;
+						font-family: "Proza Libre", sans-serif;
+						// text-align: justify;
+					}
+				}
+			}
+			&:hover{
+				transform: translateY(-5px);
+			}
+			footer{
+				pointer-events: none;
+				span{
+					font-family: "Space Mono", sans-serif;
+					// margin-right: 3px;
+					color: #74b9ff;
+					font-size: 12px;
+					padding: 0px 2px;
+					border: 1px solid #74b9ff;
+					border-radius: 3px;
+				}
+			}
+		}
+	}
+}
+#contact{
+	h1{
+		font-size:44px;
+		font-family: "Open Sans", sans-serif;
+	}
+	h2 {
+		font-size: 30px;
+		font-family: "Open Sans", sans-serif;
+		position: relative;
+		color: $primary-2;
+
+		&::before {
+			content: "04.";
+			font-family: "Space Mono", sans-serif;
+			color: $primary-2;
+		}
+
+		&::after {
+			position: absolute;
+			content: "";
+			height: 0.5px;
+			width: 40%;
+			right: 30%;
+			top: 55%;
+			background: $text;
+		}
+	}
+	p{
+		font-size: 16px;
+		font-family: "Open Sans", sans-serif;
+		width: 480px;
+	}
+	a{
+		margin-top: 6em;
+		display: inline-block;
+		font-family: "Space Mono", sans-serif;
+		color: $text;
+		text-decoration: none;
+		padding: 12px 16px;
+		border: 1px solid $primary;
+		background: $primary-light;
+		transition: 0.2s;
+		border-radius: 5px;
+		&:hover{
+			background: rgba(162, 155, 254, 0.3);
+		}
 	}
 }

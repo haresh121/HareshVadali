@@ -1,3 +1,19 @@
+// window.onload = (function(){
+//     setTimeout(function(){
+//         // $('.start-animation').animate({opacity: "0"}, 1000, function () {
+//             window.scrollTo(0, 0);
+//             $('.start-animation').css("display", "none");
+//             $("html").removeClass("toggle-overflow");
+//             $("body").removeClass("toggle-overflow");
+//                 // });
+//     }, 4000);
+// });
+// var tl = gsap.timeline({defaults: { duration: 1, stagger: 0.4}});
+// tl.from('.nav-link', {y: -20, duration:1.5, delay:4, stagger: 0.3, opacity:0})
+//     .from('.header-h1', {y: 20, opacity: 0, stagger: 0.3, delay: -2})
+//     .from('.sides-nav', {y:60, opacity:0, delay: 0.1});
+
+
 $(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -5,7 +21,7 @@ $(function() {
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html,body').animate({
-                    scrollTop: target.offset().top - 80
+                    scrollTop: target.offset().top - 50
                 }, 1000);
                 return false;
             }
